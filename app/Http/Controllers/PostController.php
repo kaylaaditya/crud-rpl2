@@ -47,9 +47,9 @@ class PostController extends Controller
     public function update(Request $request, Post $post){
         //validate form
         $this->validate($request,[
-            'image' => 'required|min:5',
+            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svc|max:2048',
             'title' => 'required|min:10',
-            // 'content' => 'required|min:10'
+            'content' => 'required|min:10'
         ]);
         // check if image is uploaded
         if($request->hasfile('image')){

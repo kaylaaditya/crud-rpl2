@@ -39,6 +39,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                    <a href="{{ route('posts.show', $post->id) }}" class="btn btn-sm btn-secondary">SHOW</a>
                                 </form>
 
                                 </td>
